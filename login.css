@@ -1,0 +1,112 @@
+/* --- PRESETS --- */
+:root {
+    --gold-primary: #b8a24c;
+    --text-dark: #1A1A1A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Lato', sans-serif;
+    /* Reuse your background image */
+    background-image: url('images/background-bloom.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- BACK BUTTON --- */
+.simple-nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* --- LOGIN BOX --- */
+.login-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid var(--gold-primary);
+}
+
+.login-logo {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+/* --- FORM INPUTS --- */
+.input-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: var(--gold-primary);
+}
+
+/* --- BUTTON --- */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--gold-primary);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #9e8a3d;
+}
+
+.error-text {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    min-height: 20px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jade Jewellery - Yesim Abla Dashboard</title>
+    <link rel="icon" type="image/png" href="images/web_icon.png">
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="admin-header">
+        <div class="header-left">
+            <img src="images/logo_header.png" alt="Logo" class="admin-logo">
+            <span class="admin-title">Collection Manager</span>
+        </div>
+        <div class="header-right">
+            <span id="userEmail" class="user-email"></span>
+            <button id="logoutBtn" class="logout-link">Logout</button>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        
+        <!-- Create New Collection -->
+        <div class="card">
+            <h3>Create New Collection</h3>
+            <p class="subtitle">Add a new collection with items to your gallery</p>
+            
+            <div class="form-section">
+                <label class="form-label">Collection Name</label>
+                <input type="text" id="newCollectionName" placeholder="e.g., 'Spring Bloom'" class="admin-input">
+            </div>
+
+            <div class="form-section">
+                <label class="form-label">Add Items to Collection</label>
+                <div class="item-input-group">
+                    <input type="text" id="itemName" placeholder="Item name" class="admin-input">
+                    <input type="file" id="itemImage" accept="image/*" class="file-input">
+                    <button id="addItemBtn" class="action-btn add-btn">Add Item</button>
+                </div>
+            </div>
+
+            <!-- Draft Items List -->
+            <div id="draftItemsContainer" class="draft-container" style="display: none;">
+                <h4>Items to be added:</h4>
+                <div id="draftItems" class="draft-items-grid"></div>
+            </div>
+
+            <button id="createCollectionBtn" class="action-btn gold-btn full-width" disabled>
+                Create Collection
+            </button>
+        </div>
+
+        <!-- Existing Collections -->
+        <div class="card">
+            <h3>Manage Collections</h3>
+            <p class="subtitle">Edit or delete your existing collections</p>
+            
+            <div id="collectionsContainer" class="collections-container">
+                <div class="loading">Yesim Abla, i am loading your collections...</div>
+            </div>
+        </div>
+
+        <!-- Edit Collection Modal -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Edit Collection: <span id="editCollectionName"></span></h3>
+                
+                <div class="form-section">
+                    <label class="form-label">Collection Name</label>
+                    <input type="text" id="editNameInput" class="admin-input">
+                </div>
+
+                <div class="form-section">
+                    <label class="form-label">Add New Item</label>
+                    <div class="item-input-group">
+                        <input type="text" id="editItemName" placeholder="Item name" class="admin-input">
+                        <input type="file" id="editItemImage" accept="image/*" class="file-input">
+                        <button id="addEditItemBtn" class="action-btn add-btn">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label class="form-label">Current Items</label>
+                    <div id="editItemsList" class="edit-items-grid"></div>
+                </div>
+
+                <button id="saveChangesBtn" class="action-btn gold-btn full-width">
+                    Save Changes
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+    
+    <script src="firebase-config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

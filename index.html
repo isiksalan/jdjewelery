@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +18,7 @@
             <a href="#home" class="logo-link">
                 <img src="images/logo_header.png" alt="Jade Jewellery" class="header-logo">
             </a>
-            
+    
             <nav class="nav-menu">
                 <a href="#collection" class="nav-link">Collection</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -32,6 +29,8 @@
                 <span></span>
                 <span></span>
             </div>
+
+            <a href="login.html" class="login-corner-link">Login</a>
         </div>
     </header>
 
@@ -42,76 +41,25 @@
             <h1 class="brand-title">Bloom and shine with JD Jewellery</h1>
             
             <p class="hero-subtitle">
-                Different styles of handcrafted earrings, necklace, charms, pendants, and more...
+                Different styles of handcrafted earrings, necklace, charms, bracelets, and more...
             </p>
             
             
-            <a href="#collection" class="gold-button">View Collection</a>
+            <a href="#collection" class="gold-button">View Collections</a>
         </div>
     </section>
 
     <section id="collection" class="content-section">
         <div class="container">
-            <h2 class="section-title">The Bloom Collection</h2>
-            <div class="separator-floral"></div>
             
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images/1.png" alt="Jade Ring" class="gallery-image">
-                    <div class="item-details">
-                        <h3>Forest Drop</h3>
-                        <p>Jade & 18k Gold</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/2.png" alt="Gold Earrings" class="gallery-image">
-                    <div class="item-details">
-                        <h3>Sun Petals</h3>
-                        <p>Hand-hammered Gold</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/3.png" alt="Necklace" class="gallery-image">
-                    <div class="item-details">
-                        <h3>Morning Dew</h3>
-                        <p>Pearl & Emerald</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/4.png" alt="Bracelet" class="gallery-image">
-                    <div class="item-details">
-                        <h3>Vine Cuff</h3>
-                        <p>Intricate Filigree</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/5.png" alt="Bracelet" class="gallery-image">
-                    <div class="item-details">
-                        <h3>Vine Cuff</h3>
-                        <p>Intricate Filigree</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/6.png" alt="Bracelet" class="gallery-image">
-                    <div class="item-details">
-                        <h3>Vine Cuff</h3>
-                        <p>Intricate Filigree</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/7.png" alt="Bracelet" class="gallery-image">
-                    <div class="item-details">
-                        <h3>Vine Cuff</h3>
-                        <p>Intricate Filigree</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/8.png" alt="Bracelet" class="gallery-image">
-                    <div class="item-details">
-                        <h3>Vine Cuff</h3>
-                        <p>Intricate Filigree</p>
-                    </div>
-                </div>
+            <div class="slider-wrapper">
+                
+                <button class="slider-btn prev-btn" id="prevBtn">&#10094;</button>
+
+                <div id="slider-container"></div>
+
+                <button class="slider-btn next-btn" id="nextBtn">&#10095;</button>
+
             </div>
         </div>
     </section>
@@ -125,26 +73,33 @@
             
                 <div class="contact-box">
                     <a href="mailto:jadejewelle@gmail.com" class="contact-link">jadejewelle@gmail.com</a>
-                <div class="social-row">
-                    <p class="follow-text">Follow us:</p>
-                    <a href="https://www.instagram.com/jadejewele/" target="_blank" class="social-link">
-                    <img src="images/insta_logo.png" alt="Instagram" class="social-icon">
-                    </a>
-                </div>
+                    <div class="social-row">
+                        <p class="follow-text">Follow us:</p>
+                        <a href="https://www.instagram.com/jadejewele/" target="_blank" class="social-link">
+                            <img src="images/insta_logo.png" alt="Instagram" class="social-icon">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
-
     <footer class="footer">
         <p>&copy; 2025 Jade Jewellery. Handcrafted with Love.</p>
     </footer>
+    
     <div id="lightbox" class="lightbox">
         <span class="close-lightbox">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+
+    <script src="firebase-config.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
